@@ -26,7 +26,7 @@ This model combines Convolutional Neural Network (CNN) and Bidirectional Long Sh
 ### PhoBERT Fine-tuning
 We use the best model from the AIViVN's competition by [Khoi Nguyen](https://github.com/suicao). The model scored 0.90849 on the public leaderboard
 
-### Model architecture
+#### Model architecture
 Here we created a custom classification head on top of the BERT backbone. We concatenated the last 4 hidden representations of the ```[CLS]``` token, which is actually ```<s>``` in this case, and fed it to a simple MLP.
 
 ![](https://i.imgur.com/1bYD5dq.png)
