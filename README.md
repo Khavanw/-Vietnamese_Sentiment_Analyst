@@ -1,14 +1,23 @@
 # [PhoBERT Fine-tuning] Vietnamese_Sentiment_Analyst
 
 ## Overview
-In today's digital age, the amount of textual data generated and shared on digital platforms is increasing exponentially. From social media comments, product reviews, to customer feedback, text has become a valuable source of information about human emotions and opinions. However, understanding and analyzing emotions within this massive amount of textual data manually is not feasible.
+This system combines advanced natural language processing techniques to perform sentiment analysis on Vietnamese text. It utilizes two main models:
+### CNN + BiLSTM Model:
+- Combines Convolutional Neural Networks (CNN) to extract local features.
+- Uses Bidirectional Long Short-Term Memory (BiLSTM) networks to capture long-term context.
 
-Sentiment analysis is a task in natural language processing (NLP) that aims to determine the attitude or emotion of the writer towards a specific topic. This project focuses on sentiment analysis for Vietnamese text.
+### PhoBERT Fine-tuning:
+- Utilizes the PhoBERT language model fine-tuned for Vietnamese.
+- Adapts the model for specific sentiment analysis tasks.
 
-This project performs sentiment analysis on Vietnamese text using two main approaches:
+### Operational Process:
+1. Preprocess the Vietnamese text data.
+2. Apply both models to analyze sentiment.
+3. Combine the results from both models to make the final prediction.
+4. Automatically store the results in a database.
+5. Deploy the model via a Flask API for easy integration.
 
-1. A model combining CNN and BiLSTM
-2. Fine-tuning the PhoBERT model
+![WorkFlow_Sentiment_Anaylyst](https://github.com/user-attachments/assets/4ef1b462-9c69-4fac-969e-7a04c512b366)
 
 ## Method
 ### CNN + BiLSTM
@@ -40,7 +49,7 @@ Using dataset UIT-ViSFD preprcessing in file notebook:
 
 Install the python bindings:
 
-```$pip3 install  vncorenlp```
+```$pip install  vncorenlp```
 
 Clone the VNCoreNLP repo: https://github.com/vncorenlp/VnCoreNLP
 
