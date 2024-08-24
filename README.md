@@ -22,5 +22,16 @@ Here we created a custom classification head on top of the BERT backbone. We con
 
 ![](https://i.imgur.com/1bYD5dq.png)
 ## Dataset
+### UIT-ViSFD
+Dowload dataset from https://github.com/LuongPhan/UIT-ViSFD/blob/main/UIT-ViSFD.zip
 
-## 
+### Data Information
+- Train: 7,786.
+- Dev: 1,112.
+- Test: 2,224.
+
+## Setup model traning
+### Data preprocessing
+Using dataset UIT-ViSFD run:
+```$python crash2csv.py```
+
