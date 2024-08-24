@@ -31,7 +31,47 @@ Dowload dataset from https://github.com/LuongPhan/UIT-ViSFD/blob/main/UIT-ViSFD.
 - Test: 2,224.
 
 ## Setup model traning
-### Data preprocessing
-Using dataset UIT-ViSFD run:
-```$python crash2csv.py```
 
+### Data preprocessing
+Using dataset UIT-ViSFD preprcessing in file notebook:
+```train\data_preprocessing.ipynb```
+
+### Installing VnCoreNLP
+
+Install the python bindings:
+
+```$pip3 install  vncorenlp```
+
+Clone the VNCoreNLP repo: https://github.com/vncorenlp/VnCoreNLP
+
+### Downloading PhoBERT 
+
+Follow the instructions in the original repo:
+
+PhoBERT-base:
+
+```
+$wget https://public.vinai.io/PhoBERT_base_transformers.tar.gz
+$tar -xzvf PhoBERT_base_transformers.tar.gz
+```
+## Experiments
+The training/test loss curves for each experiment are shown below:
+- CNN + BiLSTM:
+  
+  ![image](https://github.com/user-attachments/assets/098f7be9-c740-4b27-a074-15e14bf2b92c)
+- PhoBERT Fine-tuning: The model achieved excellent results in fold 0 within the first 20 epochs
+  - UC (Area Under the Curve): An AUC score close to 1 indicates that the model has a very good ability to distinguish between classes.
+  - F1 Score: The F1 score reflects the balance between precision and recall. A score of 0.7773 is a good result.
+
+## Result Classification report and confussion matrix
+- CNN + BiLSTM:
+
+![image](https://github.com/user-attachments/assets/b0c19fd4-d060-4e52-940a-e122d0fd8560)
+
+- PhoBERT Fine-tuning:
+
+![image](https://github.com/user-attachments/assets/5ef00bf4-2c82-4773-a6be-86974b9eb08e)
+
+
+
+  
