@@ -74,12 +74,15 @@ The training/test loss curves for each experiment are shown below:
 
 ## Result Classification report and confussion matrix
 - CNN + BiLSTM:
-
-![image](https://github.com/user-attachments/assets/b0c19fd4-d060-4e52-940a-e122d0fd8560)
+<p align="center">
+  <img src="results/CNN_BiLSTM.png" width="593" height="424><br/>
+</p>
 
 - PhoBERT Fine-tuning:
 
-![image](https://github.com/user-attachments/assets/5ef00bf4-2c82-4773-a6be-86974b9eb08e)
+<p align="center">
+  <img src="results/PhoBERT.png" width="693" height="524"><br/>
+</p>
 
 
 
